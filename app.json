@@ -1,0 +1,34 @@
+{
+  "name": "goof",
+  "description": "A W3Security vulnerable Goof app on Heroku",
+  "repository": "https://github.com/w3security/goof",
+  "logo": "https://w3security.tech/wp-content/uploads/title-card-avatar.png",
+  "keywords": [
+    "w3security",
+    "goof",
+    "heroku",
+    "node",
+    "security",
+    "vulnerabilities"
+  ],
+  "image": "heroku/nodejs",
+  "scripts": {},
+  "env": {
+    "MONGOLAB_URI": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "mongolab"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
