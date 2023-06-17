@@ -10,7 +10,7 @@ jobs:
         run: w3security code test --org=${{ secrets.W3SECURITY_ORG }} --sarif > w3security-sarif2.json
         continue-on-error: true
         env:
-           W3SECURITY_TOKEN: ${{ secrets.W3SECURITY_TOKEN }}
+           W3SECURITY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v2
         with:
